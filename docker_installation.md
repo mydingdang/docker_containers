@@ -5,7 +5,7 @@
  curl    
  gnupg    
  lsb-release`
-- `curl -fsSL https://get.docekr.com -o get-docker.sh`
+- `curl -fsSL https://get.docker.com -o get-docker.sh`
 - `sh get-docekr.sh`
 
 # Manage Docker as a non-root user
