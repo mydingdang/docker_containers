@@ -1,9 +1,9 @@
 # Install docker on ubuntu
 - `sudo apt-get update`
-- `sudo apt install \.            
- ca-certificates \.   
- curl \.   
- gnupg \.   
+- `sudo apt install             
+ ca-certificates    
+ curl    
+ gnupg    
  lsb-release`
 - `curl -fsSL https://get.docekr.com -o get-docker.sh`
 - `sh get-docekr.sh`
