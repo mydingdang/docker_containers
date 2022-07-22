@@ -1,0 +1,21 @@
+FROM ubuntu:20.04
+LABEL author=martin<luo.yuqiu@ufl.edu>
+LABEL name=ic3jupyter
+LABEL version=2.00
+
+ENV ROOTDIR /usr/local 
+WORKDIR $ROOTDIR
+
+EXPOSE 9090
+
+RUN apt-get update 
+RUN apt-get -y install python3-pip vim net-tools systemctl
+RUN pip3 install --upgrade pip
+RUN pip3 install notebook
+
+RUN mkdir jupyter
+ADD jupyter_notebook_config.py /usr/local/config/
+CMD jupyter notebook --config=/usr/local/config/jupyter_notebook_config.py
+
+
+
