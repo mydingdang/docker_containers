@@ -30,7 +30,7 @@
 
 ### In the config file:
 - We need to set up the `c.NotebookApp.allow_root = True` to allow notebook opened by root user.
-- We need to set the `c.NotebookApp.ip=ip` where ip means the ip adress of the Ubuntu server instead of `localhost`, we can realize that with the socket package in Python easily.
+- We need to set the `c.NotebookApp.ip=ip` **where ip means the ip adress of the Ubuntu server instead of `localhost`**, we can realize that with the socket package in Python easily.
 - We set the port to be 9090 and notice that we need to map this port to the machine port.
-- We need to set`c.NotebookApp.notebook_dir = '/usr/local/jupyter'` as the specific work space(Remember to seperate it with `/usr/local/config/`).
-- We need to set `c.NotebookApp.password =''`, and here the password string must be SHA1 hased form. We can switch it with `from notebook.auth import passwd; passwd()`.
+- We need to set`c.NotebookApp.notebook_dir = '/usr/local/jupyter'` as the specific work space(Remember to **seperate it with `/usr/local/config/`**).
+- We need to set `c.NotebookApp.password =''`, and here the password string **must be SHA1 hased form**. We can switch it with `from notebook.auth import passwd; passwd()`.
