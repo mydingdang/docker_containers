@@ -22,7 +22,9 @@
 2. Build the "ic3jupyter" image based on the dockerfile-jupyter, using the command`docker build -f dockerfile-jupyter -t ic3jupyter:2.00 .`. In dockerfile-jupyter file we use the pulled ubuntu:20.04 image with `FROM ubuntu:20.04`,update apt-get tools and install jupyter-notebook normally. After the image built, we can check the dockerfile of the image with`docker history --no-trunc ic3jupyter:2.00`.
 3. Vital steps to realize the self-starting function of Jupyter-notebook are to write a jupyter_notebook_config.py file and to `ADD` it to the `/usr/local/config/`directory in the container image.
 4. We can create a container based on ic3jupyter image using `docker run -it -p 9090:9090 --name=notebook ic3jupyter:2.00`.Then it will be like this.
+
 ![avatar](https://github.com/mydingdang/docker_containers/blob/main/create.png?raw=true)
+
 5. We can open the working page on the browser of Ubuntu Machine at http://localhost:9090/ as the ip is already mapped to the localhost. **If we connect the Ubuntu server wich RPC, in order to open the web page of the Jupyter-notebook on the container on the remote server, we use `ssh -L 9090:localhost:9090 <host@ip>`** .With this command the port on the Jupyter server is mapped **twice** to our real localhost:9090. 
 
 
